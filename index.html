@@ -166,7 +166,7 @@
                 <a href="https://github.com/Liusy12810">Github</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="https://liusy12810.github.io?jumpto=bilibili">Contact</a>
             </li>
         </ul>
     </header>
@@ -206,6 +206,12 @@
         //         searchBox.clientWidth;
         //     cursor.style.left = `${width}px`;
         // });
+        function parse(url) {
+            return [...new URL(url).searchParams].reduce(
+                (cur, [key, value]) => ((cur[key] = value), cur),
+                {}
+            );
+        }
     </script>
     <!-- <script src="code-rain.js"></script> -->
 </body>
