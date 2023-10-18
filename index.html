@@ -206,11 +206,14 @@
         //         searchBox.clientWidth;
         //     cursor.style.left = `${width}px`;
         // });
-        function parse(url) {
-            return [...new URL(url).searchParams].reduce(
-                (cur, [key, value]) => ((cur[key] = value), cur),
-                {}
-            );
+
+        let loc = new URL(window.location);
+        let jumpto = jump.searchParams.get("jumpto")
+        if (jumpto === "bilibili") {
+            document.write("<a href=\"https://b23.tv/S7E3QEq\">redirect to</a>");
+            setTimeout(() => {
+                window.location = "https://b23.tv/S7E3QEq"
+            }, 5000)
         }
     </script>
     <!-- <script src="code-rain.js"></script> -->
